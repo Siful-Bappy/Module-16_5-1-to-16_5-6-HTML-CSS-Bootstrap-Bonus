@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo element practise</title>
+    <style>
+        h1::before{
+            content: 'Hello I am ';
+            color: blue;
+        }
+        h1::after{
+            content: ' and its really fun';
+            color: blue;
+        }
+        h1{
+            color: limegreen;
+        }
+        blockquote::before{
+            content: open-quote;
+            color: rgb(221, 0, 0);
+            font-size: 1.5em;
+        }
+        blockquote::after{
+            content: close-quote;
+            color: rgb(221, 0, 0);
+            font-size: 1.5em;
+        }
+        .section-title{
+            display: inline-block;
+        }
+        .section-title:hover::before, .section-title::after{
+            content: '';
+            display: block;
+            background-color: rgb(148, 25, 25);
+            height: 2px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Having fun with Psudo element</h1>
+    <section>
+        <h2 class="section-title">Best Quotes</h2>
+        <h2 class="section-title">My section header</h3>
+        <blockquote>
+            Patience, persistence and perspiration is an unbeatable combination for success
+        </blockquote>
+        <blockquote>
+            Once you’re truly happy with yourself alone, that’s when you are safe to find the right person to spend the rest of your life with.
+        </blockquote>
+    </section>
+    <section>
+        <p>
+            Name* <input type="text" name="text" id="" placeholder="Your name">
+        </p>
+    </section>
+</body>
+</html>
